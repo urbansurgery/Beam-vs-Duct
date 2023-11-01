@@ -264,6 +264,20 @@ wrapt = ">=1.10,<2"
 dev = ["PyTest", "PyTest-Cov", "bump2version (<1)", "sphinx (<2)", "tox"]
 
 [[package]]
+name = "gmsh-interop"
+version = "2021.1.1"
+description = "A parser for GMSH's .msh format"
+optional = false
+python-versions = "~=3.6"
+files = [
+    {file = "gmsh_interop-2021.1.1.tar.gz", hash = "sha256:5456903283327dfa57fd973bb463c5fbc1c98c8f7ad15327441acb75da10b5f1"},
+]
+
+[package.dependencies]
+numpy = ">=1.6.0"
+pytools = "*"
+
+[[package]]
 name = "gql"
 version = "3.4.1"
 description = "GraphQL client for Python"
@@ -380,6 +394,69 @@ files = [
     {file = "iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374"},
     {file = "iniconfig-2.0.0.tar.gz", hash = "sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3"},
 ]
+
+[[package]]
+name = "meshpy"
+version = "2022.1.3"
+description = "Triangular and Tetrahedral Mesh Generator"
+optional = false
+python-versions = "~=3.6"
+files = [
+    {file = "MeshPy-2022.1.3-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:2d40478a535cfc27e8e545efa3620f7950b64970f5f0d00102271be6aa449956"},
+    {file = "MeshPy-2022.1.3-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:46d4d89cc41b7b1f417d51671b1f66a8c852df119c1ead1134f422dc89dd40b9"},
+    {file = "MeshPy-2022.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:010c227ec6d3a9c14d8bf7d1f9f2651b317c70beee79c75d7a1d26b3a9e41b1f"},
+    {file = "MeshPy-2022.1.3-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:14702088db853d3a72a4ed82654d5ab702a1f7c5561321c2945a8235b7a3b1d6"},
+    {file = "MeshPy-2022.1.3-cp310-cp310-win32.whl", hash = "sha256:dbe033062ed7dfc429ecf06070599054fe93d19c778d2b8159469b1210b36eb2"},
+    {file = "MeshPy-2022.1.3-cp310-cp310-win_amd64.whl", hash = "sha256:2fbade42c1a7b07f9247e8a6ba7060a30dd72bddeeee70e6f6b05b03a88647c7"},
+    {file = "MeshPy-2022.1.3-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:db5160faba0362eaeeb5aaee5f7f12f7dc11d659e4ce5fd54e04bd0b46d3993f"},
+    {file = "MeshPy-2022.1.3-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:14dc6af3f910185711b72c01250755778d995c32309f9ae1a250f3094e7e49e1"},
+    {file = "MeshPy-2022.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6640d5e84bd551eef2c8304b28f9d0cd0c1a2b6f4367571d84174ff16cb0c901"},
+    {file = "MeshPy-2022.1.3-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:5f48f44eaebf900cfafcb4865cd336df8df6be2bbbd894530fa27f6cbe61cc18"},
+    {file = "MeshPy-2022.1.3-cp311-cp311-win32.whl", hash = "sha256:3f12b5eeee2907d8ff18e1438076e8e1b3e9c5c23d81578b48b5673d5742343a"},
+    {file = "MeshPy-2022.1.3-cp311-cp311-win_amd64.whl", hash = "sha256:53e9d7a35bc9c1f0dfa7851270f28a88290e68064da3994275934b4d6ad7626b"},
+    {file = "MeshPy-2022.1.3-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:8359d11f19b26ac26fbc0d0c68a85041a7b1d9c617658f0263228e73f5397da5"},
+    {file = "MeshPy-2022.1.3-cp36-cp36m-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:b58f77fa33320ea7a2bfbae8c5b8b167f1aa51d808202ee00dd7ac6a295fe441"},
+    {file = "MeshPy-2022.1.3-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:21b77b6d8a5881d1eda539d6970c94c9599e0fba30786fc8dd0d1bbfb09099be"},
+    {file = "MeshPy-2022.1.3-cp36-cp36m-musllinux_1_1_x86_64.whl", hash = "sha256:04998278162804c958c27df892fa9142d72312b29beba759bdb7fa41d4579dfa"},
+    {file = "MeshPy-2022.1.3-cp36-cp36m-win32.whl", hash = "sha256:eba9184245252c29e2f3cd7a3916dacff298c36b1b8c079ae7a9348074cc73df"},
+    {file = "MeshPy-2022.1.3-cp36-cp36m-win_amd64.whl", hash = "sha256:1bfdbea6c26ecbe549405e3b7232951de2e7fc7c6022d6510f13bcf322d0d28e"},
+    {file = "MeshPy-2022.1.3-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:84c36a09cbde5faec694639afbbe46411343e6ee851461f75a44ab7b7ecd46b2"},
+    {file = "MeshPy-2022.1.3-cp37-cp37m-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:cb9fc0beea36a7248cd5095e2545c6b382f5f3d0a3d4ea7dad21db55a4ac7e46"},
+    {file = "MeshPy-2022.1.3-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:05dd59beb06ad62e3037127dbd5ef6b00bdb5dccab51142d1cf46e2ff8c1fb51"},
+    {file = "MeshPy-2022.1.3-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:1d17963c92b21e8408554cc171182483ea2ae4a66f46b18ea8128d6c8fa4e8da"},
+    {file = "MeshPy-2022.1.3-cp37-cp37m-win32.whl", hash = "sha256:a01b19dfbe5967f73d311c8e8801f523138cba456d67bd051d5a31d021c4f7d2"},
+    {file = "MeshPy-2022.1.3-cp37-cp37m-win_amd64.whl", hash = "sha256:4db4a73ae4a92e39f4a2b1fc38522953484b35b5ac7b705a86b7ae0236d68d12"},
+    {file = "MeshPy-2022.1.3-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:9bba744adb3754cfa59d1ff516e8013a37368ed9f3e203409ca502ab7b17bedf"},
+    {file = "MeshPy-2022.1.3-cp38-cp38-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:986f170716d6eb0e8dbc1a8e0f129e0ae300b6f1fdbebe7706b3115a3d059a39"},
+    {file = "MeshPy-2022.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fb64d7ee79c2370841856f20f8647e49b5475b38f401755a5e4f412a2ff58a6d"},
+    {file = "MeshPy-2022.1.3-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:05bab01de672526ba31bbe9a7440503cbe970d8e56a5e6b0ea132310d86feda5"},
+    {file = "MeshPy-2022.1.3-cp38-cp38-win32.whl", hash = "sha256:183cb130a3dccea7df35c517869f5159f34a8d9fb1b666eb48779495fdac96c9"},
+    {file = "MeshPy-2022.1.3-cp38-cp38-win_amd64.whl", hash = "sha256:e7a7fc0f7cd8f93758ed5ed15f2806ec48da3f7ddad6838d9d564db18cb1f436"},
+    {file = "MeshPy-2022.1.3-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:1a2d78d1f2a67ed3073bfa63e79638aafaeb2717348e820cbbc7709a7d9be2ad"},
+    {file = "MeshPy-2022.1.3-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:37e90f154a70fcf2c2ece584f58fb6764d2ee0007d3fddc6cf04b0295de98dab"},
+    {file = "MeshPy-2022.1.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b876f6f6e8ae865e875b355a1c68ca5672a1a03babdf91a83bcc0f3d92804655"},
+    {file = "MeshPy-2022.1.3-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:8d4967ec3166af5147377734c4a4256c8ae3bb94a265d149da6420c728a974b0"},
+    {file = "MeshPy-2022.1.3-cp39-cp39-win32.whl", hash = "sha256:b81ace2fff18a63482c4b6be04b27d51c7a715e8d53bf8f270f0414da35685ab"},
+    {file = "MeshPy-2022.1.3-cp39-cp39-win_amd64.whl", hash = "sha256:0fd5ffd0c90d9e0b0b1f86b55616c21a8812d1d36d0a4408ed6bd2d640a17bb5"},
+    {file = "MeshPy-2022.1.3-pp37-pypy37_pp73-macosx_10_9_x86_64.whl", hash = "sha256:cc5a719c12d011750dd588398b4e355aa85e0dd9dc185689fd139466121978af"},
+    {file = "MeshPy-2022.1.3-pp37-pypy37_pp73-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:6fb9a58dc741bf8548c644b067212cbc2d7aeadb7dfa2a5eb9d968566780ba8c"},
+    {file = "MeshPy-2022.1.3-pp37-pypy37_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0ced5e1e720a11782ff02124c738c5f699664360749c05e988963e3eaab137d7"},
+    {file = "MeshPy-2022.1.3-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:34311bb1804ccb82604016aeaaafbeb445ee3ac74c91355caaae5acd6ee9893b"},
+    {file = "MeshPy-2022.1.3-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:0a5b77f106d2f44a45364db80b9ec42a30aea720f05f4383448f434957c177a1"},
+    {file = "MeshPy-2022.1.3-pp38-pypy38_pp73-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:691d64cb4fe7af4de0e0c69f2c593c07d490563ba33a5d3db664a0ac455be53e"},
+    {file = "MeshPy-2022.1.3-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f03d2374316d02fcba24988cdc1dadd017eb111692a9c6adf8afcf81cc87e00f"},
+    {file = "MeshPy-2022.1.3-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:5ae9d56f04a368cfe9aa04091057a1eb705fd571faaa54e0c82e45c45166214e"},
+    {file = "MeshPy-2022.1.3-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:d93782f0fd0d961039549e5e5b4a53125f8ea3ec457c4f3b9261acf4a0e94268"},
+    {file = "MeshPy-2022.1.3-pp39-pypy39_pp73-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:ebb52237dbd87dc47c9c1c5d9f779bed99a4ce433407e1cb4995f90ca79a636e"},
+    {file = "MeshPy-2022.1.3-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8b7d60d288c3a99fd83ce1d1152cbe2d668c8ba036956fff68a5a4294f7f5850"},
+    {file = "MeshPy-2022.1.3-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:a0e107fbf79801721eddee9826a64787d3e3b1f0bfe3d08792bbe05c4d36f12a"},
+    {file = "MeshPy-2022.1.3.tar.gz", hash = "sha256:a7158e31ece25fa6c6cebce9fd1e968157d661dc8769fb30ceba69c351478475"},
+]
+
+[package.dependencies]
+gmsh-interop = "*"
+numpy = "*"
+pytools = ">=2011.2"
 
 [[package]]
 name = "multidict"
@@ -518,6 +595,40 @@ python-versions = ">=3.5"
 files = [
     {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},
     {file = "mypy_extensions-1.0.0.tar.gz", hash = "sha256:75dbf8955dc00442a438fc4d0666508a9a97b6bd41aa2f0ffe9d2f2725af0782"},
+]
+
+[[package]]
+name = "numpy"
+version = "1.25.2"
+description = "Fundamental package for array computing in Python"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "numpy-1.25.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:db3ccc4e37a6873045580d413fe79b68e47a681af8db2e046f1dacfa11f86eb3"},
+    {file = "numpy-1.25.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:90319e4f002795ccfc9050110bbbaa16c944b1c37c0baeea43c5fb881693ae1f"},
+    {file = "numpy-1.25.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:dfe4a913e29b418d096e696ddd422d8a5d13ffba4ea91f9f60440a3b759b0187"},
+    {file = "numpy-1.25.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f08f2e037bba04e707eebf4bc934f1972a315c883a9e0ebfa8a7756eabf9e357"},
+    {file = "numpy-1.25.2-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:bec1e7213c7cb00d67093247f8c4db156fd03075f49876957dca4711306d39c9"},
+    {file = "numpy-1.25.2-cp310-cp310-win32.whl", hash = "sha256:7dc869c0c75988e1c693d0e2d5b26034644399dd929bc049db55395b1379e044"},
+    {file = "numpy-1.25.2-cp310-cp310-win_amd64.whl", hash = "sha256:834b386f2b8210dca38c71a6e0f4fd6922f7d3fcff935dbe3a570945acb1b545"},
+    {file = "numpy-1.25.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:c5462d19336db4560041517dbb7759c21d181a67cb01b36ca109b2ae37d32418"},
+    {file = "numpy-1.25.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:c5652ea24d33585ea39eb6a6a15dac87a1206a692719ff45d53c5282e66d4a8f"},
+    {file = "numpy-1.25.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0d60fbae8e0019865fc4784745814cff1c421df5afee233db6d88ab4f14655a2"},
+    {file = "numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:60e7f0f7f6d0eee8364b9a6304c2845b9c491ac706048c7e8cf47b83123b8dbf"},
+    {file = "numpy-1.25.2-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:bb33d5a1cf360304754913a350edda36d5b8c5331a8237268c48f91253c3a364"},
+    {file = "numpy-1.25.2-cp311-cp311-win32.whl", hash = "sha256:5883c06bb92f2e6c8181df7b39971a5fb436288db58b5a1c3967702d4278691d"},
+    {file = "numpy-1.25.2-cp311-cp311-win_amd64.whl", hash = "sha256:5c97325a0ba6f9d041feb9390924614b60b99209a71a69c876f71052521d42a4"},
+    {file = "numpy-1.25.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:b79e513d7aac42ae918db3ad1341a015488530d0bb2a6abcbdd10a3a829ccfd3"},
+    {file = "numpy-1.25.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:eb942bfb6f84df5ce05dbf4b46673ffed0d3da59f13635ea9b926af3deb76926"},
+    {file = "numpy-1.25.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3e0746410e73384e70d286f93abf2520035250aad8c5714240b0492a7302fdca"},
+    {file = "numpy-1.25.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d7806500e4f5bdd04095e849265e55de20d8cc4b661b038957354327f6d9b295"},
+    {file = "numpy-1.25.2-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:8b77775f4b7df768967a7c8b3567e309f617dd5e99aeb886fa14dc1a0791141f"},
+    {file = "numpy-1.25.2-cp39-cp39-win32.whl", hash = "sha256:2792d23d62ec51e50ce4d4b7d73de8f67a2fd3ea710dcbc8563a51a03fb07b01"},
+    {file = "numpy-1.25.2-cp39-cp39-win_amd64.whl", hash = "sha256:76b4115d42a7dfc5d485d358728cdd8719be33cc5ec6ec08632a5d6fca2ed380"},
+    {file = "numpy-1.25.2-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:1a1329e26f46230bf77b02cc19e900db9b52f398d6722ca853349a782d4cff55"},
+    {file = "numpy-1.25.2-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4c3abc71e8b6edba80a01a52e66d83c5d14433cbcd26a40c329ec7ed09f37901"},
+    {file = "numpy-1.25.2-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:1b9735c27cea5d995496f46a8b1cd7b408b3f34b6d50459d9ac8fe3a20cc17bf"},
+    {file = "numpy-1.25.2.tar.gz", hash = "sha256:fd608e19c8d7c55021dffd43bfe5492fab8cc105cc8986f813f8c3c048b38760"},
 ]
 
 [[package]]
@@ -730,6 +841,23 @@ pluggy = ">=0.12,<2.0"
 testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
 
 [[package]]
+name = "pytools"
+version = "2023.1.1"
+description = "A collection of tools for Python"
+optional = false
+python-versions = "~=3.8"
+files = [
+    {file = "pytools-2023.1.1-py2.py3-none-any.whl", hash = "sha256:53b98e5d6c01a90e343f8be2f5271e94204a210ef3e74fbefa3d47ec7480f150"},
+    {file = "pytools-2023.1.1.tar.gz", hash = "sha256:80637873d206f6bcedf7cdb46ad93e868acb4ea2256db052dfcca872bdd0321f"},
+]
+
+[package.dependencies]
+platformdirs = ">=2.2.0"
+
+[package.extras]
+numpy = ["numpy (>=1.6.0)"]
+
+[[package]]
 name = "requests"
 version = "2.31.0"
 description = "Python HTTP for Humans."
@@ -831,6 +959,26 @@ python-versions = "*"
 files = [
     {file = "stringcase-1.2.0.tar.gz", hash = "sha256:48a06980661908efe8d9d34eab2b6c13aefa2163b3ced26972902e3bdfd87008"},
 ]
+
+[[package]]
+name = "trimesh"
+version = "4.0.2"
+description = "Import, export, process, analyze and view triangular meshes."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "trimesh-4.0.2-py3-none-any.whl", hash = "sha256:3d7765500f370e60f2f1a999ae9d217c253e1f64567b1382a730badeff6f53c7"},
+    {file = "trimesh-4.0.2.tar.gz", hash = "sha256:d97f618bf48a5485d2dee48d6e4093d036a928f4b9d9942571a9c862f062fee9"},
+]
+
+[package.dependencies]
+numpy = "*"
+
+[package.extras]
+all = ["trimesh[easy,recommend,test]"]
+easy = ["chardet", "colorlog", "embreex", "jsonschema", "lxml", "mapbox-earcut", "networkx", "pillow", "pycollada", "requests", "rtree", "scipy", "setuptools", "shapely", "svg.path", "xxhash"]
+recommend = ["glooey", "meshio", "psutil", "pyglet (<2)", "python-fcl", "scikit-image", "sympy", "vhacdx", "xatlas"]
+test = ["black", "coveralls", "ezdxf", "matplotlib", "mypy", "pyinstrument", "pymeshlab", "pytest", "pytest-cov", "ruff"]
 
 [[package]]
 name = "typing-extensions"
@@ -1181,4 +1329,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "797bedd0237ed31ed0b9f6294271b5c0f84a4b791d43cf16f2831459abd5b5f5"
+content-hash = "e49446e8b715b9cfef28b39dac24e801464f2301fcf5d5ac03b64f75b2051304"
