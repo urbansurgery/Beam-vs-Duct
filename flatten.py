@@ -14,38 +14,58 @@ from specklepy.objects.other import Instance, Transform
 
 
 def extract_base_and_transform(
-    base: Base,
-    inherited_instance_id: Optional[str] = None,
-    inherited_transform: Optional[Transform] = None,
-) -> Tuple[Base, str, Optional[Transform]]:
+        base: Base,
+        inherited_instance_id: Optional[str] = None,
+        transform_list: Optional[List[Transform]] = None,
+) -> Tuple[Base, str, Optional[List[Transform]]]:
     """
-    Recursively extracts Base objects and their associated transforms from a hierarchy of Base objects.
+    Traverses Speckle object hierarchies to yield `Base` objects and their transformations.
+    Tailored to Speckle's AEC data structures, it covers the newer hierarchical structures
+    with Collections and also  with patterns found in older Revit specific data.
 
     Parameters:
-    - base (Base): The Base object to start the extraction from.
-    - inherited_transform (Transform, optional): A Transform object that has been inherited from a parent Instance.
+    - base (Base): The starting point `Base` object for traversal.
+    - inherited_instance_id (str, optional): The inherited identifier for `Base` objects without a unique ID.
+    - transform_list (List[Transform], optional): Accumulated list of transformations from parent to child objects.
 
     Yields:
-    - tuple: A tuple containing a Base object and an associated Transform object or None.
-    """
-    current_id = base.id if hasattr(base, "id") else inherited_instance_id
+    - tuple: A `Base` object, its identifier, and a list of applicable `Transform` objects or None.
 
-    # If the current object is an Instance, we capture its transform and use it for its definition
+    The id of the `Base` object is either the inherited identifier for a definition from an instance
+    or the one defined in the object.
+    """
+    # Derive the identifier for the current `Base` object, defaulting to an inherited one if needed.
+    current_id = getattr(base, "id", inherited_instance_id)
+    transform_list = transform_list or []
+
     if isinstance(base, Instance):
-        current_transform = base.transform or inherited_transform
-        # Traverse the definition, if it exists
+        # Append transformation data and dive into the definition of `Instance` objects.
+        if base.transform:
+            transform_list.append(base.transform)
         if base.definition:
             yield from extract_base_and_transform(
-                base.definition,
-                current_id,
-                current_transform,
+                base.definition, current_id, transform_list.copy()
             )
     else:
-        # For non-Instance Base objects, we yield them with the inherited transform
-        yield base, current_id, inherited_transform
-        # If the Base object has elements, we traverse them and pass along the inherited transform
-        if hasattr(base, "elements") and base["elements"] is not None:
-            for element in base.elements:
+        # Initial yield for the current `Base` object.
+        yield base, current_id, transform_list
+
+        # Process 'elements' and '@elements', typical containers for `Base` objects in AEC models.
+        elements_attr = getattr(base, "elements", []) or getattr(base, "@elements", [])
+        for element in elements_attr:
+            if isinstance(element, Base):
+                # Recurse into each `Base` object within 'elements' or '@elements'.
                 yield from extract_base_and_transform(
-                    element, current_id, inherited_transform
+                    element, current_id, transform_list.copy()
                 )
+
+        # Recursively process '@'-prefixed properties that are Base objects with 'elements'.
+        # This is a common pattern in older Speckle data models, such as those used for Revit commits.
+        for attr_name in dir(base):
+            if attr_name.startswith("@"):
+                attr_value = getattr(base, attr_name)
+                # If the attribute is a Base object containing 'elements', recurse into it.
+                if isinstance(attr_value, Base) and hasattr(attr_value, "elements"):
+                    yield from extract_base_and_transform(
+                        attr_value, current_id, transform_list.copy()
+                    )
