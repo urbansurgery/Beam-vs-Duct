@@ -14,9 +14,9 @@ from specklepy.objects.other import Instance, Transform
 
 
 def extract_base_and_transform(
-        base: Base,
-        inherited_instance_id: Optional[str] = None,
-        transform_list: Optional[List[Transform]] = None,
+    base: Base,
+    inherited_instance_id: Optional[str] = None,
+    transform_list: Optional[List[Transform]] = None,
 ) -> Tuple[Base, str, Optional[List[Transform]]]:
     """
     Traverses Speckle object hierarchies to yield `Base` objects and their transformations.

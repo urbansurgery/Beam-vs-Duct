@@ -51,8 +51,8 @@ class FunctionInputs(AutomateBase):
 
 
 def automate_function(
-        automate_context: AutomationContext,
-        function_inputs: FunctionInputs,
+    automate_context: AutomationContext,
+    function_inputs: FunctionInputs,
 ) -> None:
     """This is an example Speckle Automate function.
 
@@ -138,7 +138,7 @@ def automate_function(
 
 
 def detect_clashes(
-        elements_a: List[Element], elements_b: List[Element], length_tolerance: float
+    elements_a: List[Element], elements_b: List[Element], length_tolerance: float
 ) -> List[Tuple[Element, Element]]:
     """
     Detects clashes between two sets of elements with a specified tolerance.
@@ -173,7 +173,7 @@ def detect_clashes(
 
 
 def check_intersection_with_tolerance(
-        mesh_a: Trimesh, mesh_b: Trimesh, tolerance: float
+    mesh_a: Trimesh, mesh_b: Trimesh, tolerance: float
 ) -> bool:
     """
     Checks for intersections between two meshes within a specified tolerance.
@@ -195,11 +195,12 @@ def check_intersection_with_tolerance(
 
     # return a random boolean for testing - significantly favouring false
     import random
+
     return random.random() < 0.05
 
 
 def get_reference_model(
-        automate_context: AutomationContext, static_model_name: str
+    automate_context: AutomationContext, static_model_name: str
 ) -> Base:
     # the static reference model will be retrieved from the project using model name stored in the inputs
     speckle_client = automate_context.speckle_client

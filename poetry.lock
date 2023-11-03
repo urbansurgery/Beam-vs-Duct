@@ -396,6 +396,38 @@ files = [
 ]
 
 [[package]]
+name = "meshlib"
+version = "2.2.10"
+description = "3d processing library"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "meshlib-2.2.10-cp310-none-macosx_12_0_arm64.whl", hash = "sha256:7786d16002bb874038eefbb44ea875599de585087e0246d571dca08ba42ea069"},
+    {file = "meshlib-2.2.10-cp310-none-macosx_12_0_x86_64.whl", hash = "sha256:b3e20e482e42366d1716486c31c7ba3fbfc71ac133fa46a074585bd97a9b04dc"},
+    {file = "meshlib-2.2.10-cp310-none-manylinux_2_31_aarch64.whl", hash = "sha256:6ba6f0bfe6bfd871d1c25a86b5c54c752706d88d984a905c725f0436b67b16e4"},
+    {file = "meshlib-2.2.10-cp310-none-manylinux_2_31_x86_64.whl", hash = "sha256:ce382e188c399f95a8639eb02e95dc5d923a5797603d2181af6e04fdaf2509bd"},
+    {file = "meshlib-2.2.10-cp310-none-win_amd64.whl", hash = "sha256:e70e6e59a183fa3c9179ab4b7d36c013f268d3fa128da371e0cb29fdc54c863f"},
+    {file = "meshlib-2.2.10-cp311-none-macosx_12_0_arm64.whl", hash = "sha256:c5916b24854be4cd7c7c46bf88f3785c709f51ebd574cc4c9865e5b1f48ec9bc"},
+    {file = "meshlib-2.2.10-cp311-none-macosx_12_0_x86_64.whl", hash = "sha256:903d5ace8334eca63a8686ad8553ec0cda5640667526b547bb3f5c735d24cc92"},
+    {file = "meshlib-2.2.10-cp311-none-manylinux_2_31_aarch64.whl", hash = "sha256:e32e98e7f7b69b8eaa919e31729dce68f6472ffe3296f4f53de1e413b70d8032"},
+    {file = "meshlib-2.2.10-cp311-none-manylinux_2_31_x86_64.whl", hash = "sha256:110f4b0a8b368be80626c2cedf65d6cdeb44a837aa0b3840e6dcc4fe9fca963c"},
+    {file = "meshlib-2.2.10-cp311-none-win_amd64.whl", hash = "sha256:0780da73ba6817a27866d0dcb63bbd3e22a66c3ab8c087544c98002197a589b8"},
+    {file = "meshlib-2.2.10-cp38-none-macosx_12_0_arm64.whl", hash = "sha256:cee1fa0dfd7a58494acf4622077eeb55fa92ccc2c2f855c54789899c739e00b7"},
+    {file = "meshlib-2.2.10-cp38-none-macosx_12_0_x86_64.whl", hash = "sha256:52e9ed2cd786df166936bbbd70c08ba9630804796d81caae6fe46378ddcb3ce0"},
+    {file = "meshlib-2.2.10-cp38-none-manylinux_2_31_aarch64.whl", hash = "sha256:39e4cc3be5bddca572e2cf1d044e022a67acabf418ba0ab3185ec16b752a9cf5"},
+    {file = "meshlib-2.2.10-cp38-none-manylinux_2_31_x86_64.whl", hash = "sha256:67bce683e606b59d2c7fb2fd956bb14c42ccd8ef8b61ffbb65187fd3f85fb24e"},
+    {file = "meshlib-2.2.10-cp38-none-win_amd64.whl", hash = "sha256:30e7926d8abb94db83dbf0cbc58a38f0dcc405e405152e06c0218dd37e033f7d"},
+    {file = "meshlib-2.2.10-cp39-none-macosx_12_0_arm64.whl", hash = "sha256:e6562073f61ca2cd60444280cf1094617a7015bdd4af36e4075fe34e6be1e13a"},
+    {file = "meshlib-2.2.10-cp39-none-macosx_12_0_x86_64.whl", hash = "sha256:91345b928c0295e4038aa9d4e6f8951512a139666215f9eb3a1d894a2bcde487"},
+    {file = "meshlib-2.2.10-cp39-none-manylinux_2_31_aarch64.whl", hash = "sha256:d1058a7a00d3d5ec22cb75e2892f55d9f34f27fbcb0a75654a81ab47ed6b2eab"},
+    {file = "meshlib-2.2.10-cp39-none-manylinux_2_31_x86_64.whl", hash = "sha256:55ef8e41120a97ea2f29ec8d42326810f3cf3bb2b4e1d8a44a1006a6a2c153d7"},
+    {file = "meshlib-2.2.10-cp39-none-win_amd64.whl", hash = "sha256:5d11cd7fd658cc68eeb29cc423a8f3339ffc8341f7792947d0b98cfb394e8865"},
+]
+
+[package.dependencies]
+numpy = ">=1.19.0"
+
+[[package]]
 name = "meshpy"
 version = "2022.1.3"
 description = "Triangular and Tetrahedral Mesh Generator"
@@ -1329,4 +1361,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "e49446e8b715b9cfef28b39dac24e801464f2301fcf5d5ac03b64f75b2051304"
+content-hash = "e6c434fd3d45a93d50aea870e51571e66157998fe5efa3d397f736672881f1db"
